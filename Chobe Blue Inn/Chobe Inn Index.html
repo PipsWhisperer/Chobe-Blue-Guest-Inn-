@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chobe Blue Guest Inn | Premium Gateway to African Safaris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #005B70;
+            --primary-hover: #004656;
+            --accent: #D4AF37;
+            --dark: #1A252C;
+            --light: #F4F7F6;
+            --white: #FFFFFF;
+            --gray: #64748B;
+            --border: #E2E8F0;
+            --font: 'Plus Jakarta Sans', sans-serif;
+            --shadow: 0 10px 30px rgba(0, 91, 112, 0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font);
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .logo-icon {
+            background-color: var(--primary);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .logo-subtitle {
+            font-size: 11px;
+            color: var(--gray);
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0, 91, 112, 0.2);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Split Section */
+        .hero-section {
+            margin-top: 72px;
+            min-height: 600px;
+            display: flex;
+            background-color: var(--dark);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-carousel {
+            flex: 1.1;
+            position: relative;
+            display: flex;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 60px;
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(26,37,44,0.95) 0%, rgba(26,37,44,0.5) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 580px;
+        }
+
+        .tagline {
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Booking Overlay Widget */
+        .hero-booking-panel {
+            flex: 0.9;
+            background-color: var(--white);
+            color: var(--dark);
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 1px solid var(--border);
+            box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+        }
+
+        .panel-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .panel-subtitle {
+            font-size: 13px;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gray);
+        }
+
+        input, select {
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: var(--font);
+            font-size: 13px;
+            background-color: #FAFAFA;
+            transition: var(--transition);
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(0, 91, 112, 0.1);
+        }
+
+        /* Interactive Safari Itinerary Customization */
+        .addons-section {
+            background-color: #F8FAFC;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+
+        .addons-title {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .addon-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 12px;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .addon-item:last-child {
+            border-bottom: none;
+        }
+
+        .addon-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .addon-item input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+
+        .addon-price {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .price-summary {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid var(--primary);
+        }
+
+        .price-label {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--dark);
+        }
+
+        .price-value {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .submit-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Room Grid */
+        .section-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 15px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        .card-content h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        /* The Deck Highlight Banner */
+        .deck-banner {
+            background-color: var(--dark);
+            color: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: var(--shadow);
+            margin: 60px 0;
+        }
+
+        .deck-info {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .deck-info h3 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .deck-info p {
+            color: rgba(255,255,255,0.75);
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .deck-media {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            min-height: 350px;
+        }
+
+        /* Local Area & Security Grid */
+        .service-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin: 60px 0;
+        }
+
+        .service-text h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .service-text p {
+            font-size: 15px;
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .bullets-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .bullets-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .bullets-list i {
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        .bathroom-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 180px;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid var(--border);
+        }
+
+        /* Proposal PDF & Footer Callout */
+        .proposal-callout {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+            color: var(--white);
+            border-radius: 16px;
+            padding: 50px;
+            text-align: center;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 40px rgba(0, 91, 112, 0.2);
+        }
+
+        .proposal-callout h3 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .proposal-callout p {
+            font-size: 15px;
+            margin-bottom: 30px;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .proposal-btn {
+            background-color: var(--white);
+            color: var(--primary);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: rgba(255,255,255,0.6);
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+        /* WhatsApp Overlay Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-card {
+            background-color: #E5DDD5;
+            width: 380px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .whatsapp-header {
+            background-color: #075E54;
+            color: var(--white);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .wa-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #075E54;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .wa-contact {
+            flex: 1;
+        }
+
+        .wa-name {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .wa-status {
+            font-size: 11px;
+            opacity: 0.8;
+        }
+
+        .whatsapp-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .wa-bubble {
+            max-width: 85%;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            position: relative;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .wa-bubble.received {
+            background-color: var(--white);
+            align-self: flex-start;
+            border-top-left-radius: 0;
+        }
+
+        .wa-bubble.sent {
+            background-color: #DCF8C6;
+            align-self: flex-end;
+            border-top-right-radius: 0;
+        }
+
+        .wa-time {
+            font-size: 9px;
+            color: var(--gray);
+            text-align: right;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .pdf-attachment {
+            background-color: rgba(0,0,0,0.05);
+            border-radius: 6px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+            border-left: 3px solid #E53935;
+        }
+
+        .pdf-attachment i {
+            color: #E53935;
+            font-size: 24px;
+        }
+
+        .pdf-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pdf-title {
+            font-weight: 600;
+            font-size: 11px;
+        }
+
+        .pdf-size {
+            font-size: 9px;
+            color: var(--gray);
+        }
+
+        .modal-footer {
+            background-color: #F0F0F0;
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        .close-modal-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        @media (max-width: 968px) {
+            .hero-section {
+                flex-direction: column;
+            }
+            .hero-carousel {
+                height: 300px;
+            }
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">C</div>
+                <div class="logo-text">
+                    <span class="logo-title">Chobe Blue</span>
+                    <span class="logo-subtitle">Guest Inn & Safaris</span>
+                </div>
+            </a>
+            <nav>
+                <a href="#accommodation">Premium Rooms</a>
+                <a href="#deck">Wooden Deck</a>
+                <a href="#courtyard">Paved Courtyard</a>
+                <a href="#booking-widget" class="cta-btn">Book Gateway</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Showcase with Exact Entrance Image -->
+    <section class="hero-section" id="booking-widget">
+        <div class="hero-carousel">
+            <div class="hero-slide" style="background-image: url('entrance gate.jpg');">
+                <div class="hero-content">
+                    <span class="tagline">Kasane, Botswana</span>
+                    <h1>Your Authentic Chobe Wildlife Gateway</h1>
+                    <p>Welcome to Chobe Blue Guest Inn. Fully gated, securely structured, and perfectly paved, we provide the ultimate strategic launchpad for your Chobe game drives, Zambezi river flights, and Victoria Falls itineraries.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Reservation Panel & Safari Itinerary Customizer -->
+        <div class="hero-booking-panel">
+            <div class="panel-title">
+                <i class="fa-solid fa-compass"></i> Itinerary & Booking Panel
+            </div>
+            <p class="panel-subtitle">Create your custom safari package and instantly lock in direct rates.</p>
+
+            <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nights">Nights</label>
+                        <select id="nights" onchange="calculatePrice()">
+                            <option value="1">1 Night</option>
+                            <option value="2" selected>2 Nights</option>
+                            <option value="3">3 Nights</option>
+                            <option value="5">5 Nights</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="room-type">Select Room Room</label>
+                        <select id="room-type" onchange="calculatePrice()">
+                            <option value="950">Luxury Queen En-Suite (BWP 950/n)</option>
+                            <option value="1250" selected>Deluxe Twin Suite (BWP 1,250/n)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Affiliate Safari Package Integration -->
+                <div class="addons-section">
+                    <div class="addons-title">
+                        <i class="fa-solid fa-person-hiking"></i> Add Affiliate Safari Excursions
+                    </div>
+                    <div class="addon-item">
+                        <div class="addon-left">
+                            <input type="checkbox" id="addon-gamedrive" onchange="calculatePrice()" value="550">
+                            <span>Chobe River Game Drive (Half Day)</span>
+                        </div>
+                        <span class="addon-price">+ BWP 550</span>
+                    </div>
+                    <div class="addon-item">
+                        <div class="addon-left">
+                            <input type="checkbox" id="addon-vicfalls" onchange="calculatePrice()" value="1200">
+                            <span>Victoria Falls Day Trip</span>
+                        </div>
+                        <span class="addon-price">+ BWP 1,200</span>
+                    </div>
+                    <div class="addon-item">
+                        <div class="addon-left">
+                            <input type="checkbox" id="addon-flight" onchange="calculatePrice()" value="2100">
+                            <span>Scenic Flight over Zambezi/Okavango</span>
+                        </div>
+                        <span class="addon-price">+ BWP 2,100</span>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group full">
+                        <label for="guest-name">Full Name</label>
+                        <input type="text" id="guest-name" placeholder="Mooketsi Moiteelasilo" required>
+                    </div>
+                    <div class="form-group full">
+                        <label for="guest-phone">WhatsApp Number (For Voucher)</label>
+                        <input type="tel" id="guest-phone" placeholder="+267 71 562 387" required>
+                    </div>
+                </div>
+
+                <div class="price-summary">
+                    <span class="price-label">Dynamic Total Estimate:</span>
+                    <span class="price-value" id="price-display">BWP 2,500</span>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fa-solid fa-bolt"></i> Secure Safari Checkout
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Premium Accommodation Micro Galleries using Exact Provided Pictures -->
+    <section class="section-container" id="accommodation">
+        <div class="section-header">
+            <h2>Curated Premium Living Spaces</h2>
+            <p>View our actual high-comfort room configurations matching your pristine aesthetic requirements.</p>
+        </div>
+
+        <div class="grid-3">
+            <!-- Card 1: another room 1.jpg -->
+            <div class="feature-card">
+                <div class="card-img" style="background-image: url('another room 1.jpg');">
+                    <span class="card-badge">Deluxe Queen</span>
+                </div>
+                <div class="card-content">
+                    <h3>High-Comfort Double Bedding</h3>
+                    <p>Furnished with rich neutral backgrounds, comfortable linens, wood styling, dark wood wardrobes, and custom bedside lighting elements.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Room double bed 1.jpg -->
+            <div class="feature-card">
+                <div class="card-img" style="background-image: url('Room double bed 1.jpg');">
+                    <span class="card-badge">Twin Executive</span>
+                </div>
+                <div class="card-content">
+                    <h3>Premium Executive Layouts</h3>
+                    <p>Spacious, air-conditioned layouts containing detailed deep maroon accents, geometric artwork, and extended sideboards.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Another room.jpg -->
+            <div class="feature-card">
+                <div class="card-img" style="background-image: url('Another room.jpg');">
+                    <span class="card-badge">Standard Twin</span>
+                </div>
+                <div class="card-content">
+                    <h3>Clean Workspace Suites</h3>
+                    <p>Every room holds premium automated split-unit climate control, structured modern headboards, and comfortable floor rugs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Section: outdoor sitting area.jpg -->
+    <section class="section-container" id="deck">
+        <div class="deck-banner">
+            <div class="deck-info">
+                <span class="tagline" style="color: var(--accent);">Evenings Under the African Canopy</span>
+                <h3>The Atmospheric Wooden Deck</h3>
+                <p>Relax after an intensive wildlife tour on our custom-crafted timber deck, supported by elegant organic pole frameworks, comfortable outdoor chairs, and romantic overhead festoon bulb lighting grids.</p>
+            </div>
+            <div class="deck-media" style="background-image: url('outdoor sitting area.jpg');"></div>
+        </div>
+    </section>
+
+    <!-- Highlight Section: cars in front of porch.jpg & Bathroom grids -->
+    <section class="section-container" id="courtyard">
+        <div class="service-features">
+            <div class="service-text">
+                <h3>Gated Courtyard & Luxury En-Suites</h3>
+                <p>The front driveway layout features deep, fully paved interlocking stone finishes, providing clean, dust-free parking slots for large multiple 4x4 self-drive guest vehicles.</p>
+                <div class="gallery-item" style="background-image: url('cars in front of porch.jpg'); height: 200px; margin-top: 15px; background-size: cover; background-position: center; border-radius: 12px; border: 1px solid var(--border);"></div>
+            </div>
+            
+            <div>
+                <h3 style="font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 15px;">Luxury Matte Black Finishes</h3>
+                <div class="bathroom-gallery">
+                    <!-- another room 1 bathroom.jpg -->
+                    <div class="gallery-item" style="background-image: url('another room 1 bathroom.jpg');"></div>
+                    <!-- room shower 2.jpg -->
+                    <div class="gallery-item" style="background-image: url('room shower 2.jpg');"></div>
+                    <!-- Bathroom 2.jpg -->
+                    <div class="gallery-item" style="background-image: url('Bathroom 2.jpg');"></div>
+                    <!-- television adn astudy area.jpg -->
+                    <div class="gallery-item" style="background-image: url('television adn astudy area.jpg');"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Proposal Section -->
+    <section class="section-container">
+        <div class="proposal-callout">
+            <h3>Secure Your Direct Partnership Today</h3>
+            <p>Expand beyond rooms. Automate affiliate excursion revenues automatically with Sacrosanct Tech infrastructure.</p>
+            <a href="proposal.pdf" target="_blank" class="proposal-btn">
+                <i class="fa-solid fa-file-pdf"></i> Download Complete Proposal (PDF)
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Chobe Blue Guest Inn & Safaris. All Rights Reserved. | Site Automated by <strong>Sacrosanct Tech & Automation</strong></p>
+    </footer>
+
+    <!-- WhatsApp Confirmation Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-card">
+            <div class="whatsapp-header">
+                <div class="wa-avatar">CB</div>
+                <div class="wa-contact">
+                    <div class="wa-name">Chobe Blue Auto-Bot</div>
+                    <div class="wa-status">online</div>
+                </div>
+                <div style="font-size: 18px;"><i class="fa-brands fa-whatsapp"></i></div>
+            </div>
+            <div class="whatsapp-body">
+                <div class="wa-bubble sent">
+                    <p>I just clicked book on the safari itinerary form!</p>
+                </div>
+                <div class="wa-bubble received">
+                    <p><strong>Dumelang, <span id="modal-name">Guest</span>!</strong> 🇧🇼</p>
+                    <p>Your custom safari itinerary and stay at Chobe Blue Guest Inn have been successfully logged in our systems!</p>
+                    <br>
+                    <div class="pdf-attachment">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <div class="pdf-text">
+                            <span class="pdf-title">CHOBE-BLUE-ITINERARY.pdf</span>
+                            <span class="pdf-size">210 KB &bull; Custom Voucher</span>
+                        </div>
+                    </div>
+                    <p>Your complete trip schedule, excursion vouchers, and Kasane check-in details are saved above. See you under the starry Chobe skies!</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="close-modal-btn" onclick="closeModal()">Close Demo</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculatePrice() {
+            const nights = parseInt(document.getElementById('nights').value);
+            const rate = parseInt(document.getElementById('room-type').value);
+            let baseTotal = nights * rate;
+
+            if(document.getElementById('addon-gamedrive').checked) baseTotal += parseInt(document.getElementById('addon-gamedrive').value);
+            if(document.getElementById('addon-vicfalls').checked) baseTotal += parseInt(document.getElementById('addon-vicfalls').value);
+            if(document.getElementById('addon-flight').checked) baseTotal += parseInt(document.getElementById('addon-flight').value);
+
+            document.getElementById('price-display').innerText = "BWP " + baseTotal.toLocaleString();
+        }
+
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('guest-name').value;
+            document.getElementById('modal-name').innerText = nameInput;
+            document.getElementById('success-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('success-modal').style.display = 'none';
+        }
+
+        calculatePrice();
+    </script>
+</body>
+</html>
